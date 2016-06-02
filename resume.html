@@ -6,15 +6,20 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
+
+
 <header>
-    <h1>Резюме</h1>
+
+    <h1><?php echo resume();?></h1>
 </header>
 <content>
-    <div><strong> Владимир Николаевич Чорный</strong></div>
+    <?php echo content();?>
+   <!-- <div><strong> <?php echo content();?></strong></div>
     ул.Шлихтера ,8 кв.38<br>
     г. Киев, Украина, 02105<br>
     конт.тел.: 8-093-651-52-85<br>
     Email: chornyi.vladimir@gmail.com<br><br>
+
     <div><strong>Личные данные:</strong></div>
 
     Дата рождения: 18 июня 1976г.<br>
@@ -23,37 +28,36 @@
     Семейное положение: Женат<br><br>
     <div><strong>Образование</strong></div>
     Университет экономики и права « Крок » специальность «Логистика»<br><br>
-    <div><strong>Опыт работы:</strong></div>
+    <div><strong>Опыт работы:</strong></div>-->
     <table border="1">
         <tr>
             <td>
-                С 1 февраля 2015г. по
-                31 декабря 2015г
+                <?php echo table(0,'date');?>
             </td>
             <td>
-                ООО «Вайнстайл»
+                <?php echo table(0,'firm');?>
             </td>
 
         </tr>
         <tr>
             <td>
-                Направление деятельности:
+                <?php echo table(0,'nd');?>
             </td>
             <td>
-                Розничная торговля (Интернет-магазин)
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Должность:
-            </td>
-            <td>
-                Логист
+                <?php echo table(0,'rt');?>
             </td>
         </tr>
         <tr>
             <td>
-                Обязанности:
+                <?php echo table(0,'do');?>
+            </td>
+            <td>
+                <?php echo table(0,'lo');?>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <?php echo table(0,'ob');?>
             </td>
             <td>
                 <ul>
