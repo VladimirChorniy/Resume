@@ -39,34 +39,28 @@ function resume()
     $r = 'Резюме';
     return $r;
 }
-function content($ch,$flag)
+function content()
 {
     $content[] = array('Владимир Николаевич Чорный', 'ул.Шлихтера ,8 кв.38', 'г. Киев, Украина, 02105', 'конт.тел.: 8-093-651-52-85',
         'Email: chornyi.vladimir@gmail.com');
-
     $content[] = array('Личные данные:', 'Дата рождения: 18 июня 1976г.', 'Место рождения: г. Киев', 'Национальность: Украинец',
         'Семейное положение: Женат');
     $content[] = array('Образование', 'Университет экономики и права « Крок » специальность «Логистика»');
     $content[] = array('Опыт работы:');
     $echo = '';
-    //while ($ch < $content[$ch]) {
-
-    foreach ($content[$ch] as $key => $vol) {
-        if ($key == 0 && $flag == 0) {
-
-            $echo .= $vol;
-
-            break;
-        }if ($key == 0 && $flag == 1) {
-            continue;
-        } else {
-            $echo .= $vol . '<br>';
+    for ($a = 0;$a < count($content);$a++) {
+        foreach ($content[$a] as $key => $vol) {
+            if ($key == 0) {
+                $echo .= '<div>' . $vol . '</div>';
+            } else {
+                $echo .= $vol . '<br>';
+            }
         }
+        $echo .= '<br>';
     }
-    $echo .= '<br>';
-
-return $echo;
+    return $echo;
 }
+
 function table($key1,$key2){
     global $table;
     return $table[$key1][$key2];
